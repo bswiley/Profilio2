@@ -1,0 +1,81 @@
+:root {
+  --muted-font: #bcb2b8; /* muted brown color */
+  --vivid-font: #e8c3df;  /* vivid pink */
+  --background: #4d4d4b; /* brown for background */
+}
+
+/* Nav link styles using variables */
+.nav-tabs .nav-link {
+  color: var(--background);
+  background-color: var(--muted-font) !important;
+}
+
+/* Styles for active nav link using variables */
+.nav-tabs .nav-link.active {
+  color: var(--vivid-font) !important;
+  background-color: var(--background) !important;
+}
+
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  height: 300px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 20px;
+
+ 
+}
+.card h2{
+   background-color: var(--background);
+   color: var(--vivid-font);
+}
+card img{
+  min-width: 500px;
+  height: 300px;
+}
+
+.profileLinks {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background);
+  color: var(--muted-font);
+  
+}
+.github-link{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: var(--background);
+  color: var(--vivid-font);
+  
+}
+.deployed{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--muted-font);
+  background-color: var(--background);
+  color: var(--vivid-font);
+}
+.contactForm{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+#email {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 33px;
+}
+
