@@ -36,7 +36,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
     <div className="cardContainer">
       <div className="card">
       <h2>Film Face-Off</h2>
-      <img src='../../../../public/images/project1.jpg' 
+      <img src='./images/project1.jpg' 
       alt='image of Film Face-Off project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed1ButtonClick}className="deployed">deployed location</button>
@@ -45,7 +45,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
       </div>
       <div className="card">
       <h2>Spark-Concepts</h2>
-      <img src='../../../../public/images/project2.jpg'
+      <img src='./images/project2.jpg'
       alt='image of Spark-Concepts project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed2ButtonClick} className="deployed">deployed location</button>
@@ -54,7 +54,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
       </div>
       <div className="card">
       <h2>(Tech) Blog</h2>
-      <img src='../../../../public/images/project3.jpg'
+      <img src='./images/project3.jpg'
       alt='image of (Tech) Blog project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed3ButtonClick} className="deployed">deployed location</button>
@@ -63,7 +63,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
       </div>
       <div className="card">
       <h2>Weather There</h2>
-      <img src='../../../../public/images/project4.jpg'
+      <img src='./images/project4.jpg'
       alt='image of Weather There project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed4ButtonClick} className="deployed">deployed location</button>
@@ -72,7 +72,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
       </div>
       <div className="card">
       <h2>Note This</h2>
-      <img src='../../../../public/images/project5.jpg'
+      <img src='./images/project5.jpg'
       alt='image of Note This project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed5ButtonClick} className="deployed">deployed location</button>
@@ -81,7 +81,7 @@ window.location.href = 'https://github.com/bswiley/This-too-shall-pass';
       </div>
       <div className="card">
       <h2>This too shall Pass</h2>
-      <img src='../../../../public/images/project6.jpg'
+      <img src='./images/project6.jpg'
       alt='image of This too shall Pass project'/>
       <div className = "profileLinks">
       <button onClick={handleDeployed6ButtonClick} className="deployed">deployed location</button>
