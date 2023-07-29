@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/nav-tabs.css';
 import Header from './Header';
-import Footer from './Footer';
+
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
@@ -47,9 +47,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           </li>
         </ul>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </>
   );
 }

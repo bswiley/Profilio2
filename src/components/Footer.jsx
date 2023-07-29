@@ -2,8 +2,8 @@ function Footer() {
     return (
       <header className="footer">
         <h1> <h1>
-          Brian Wiley <br />
-          Profile and Portfolio
+          footer (sorry, still in progress) <br />
+        
         </h1></h1>
       </header>
     );
