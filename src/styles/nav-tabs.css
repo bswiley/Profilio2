@@ -1,6 +1,6 @@
 :root {
-  --muted-font: #bcb2b8; /* muted brown color */
-  --vivid-font: #e8c3df;  /* vivid pink */
+  --muted-font: #90EE90;  /* light green */ 
+  --vivid-font:#DFFFBF ;  /* Pale green */
   --background: #4d4d4b; /* brown for background */
 }
 
@@ -26,9 +26,10 @@
   flex-direction: column;
   min-width: 500px;
   height: 300px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-right: 50px;
   margin-left: 20px;
+  margin-bottom: 30px;
 
  
 }
@@ -91,11 +92,27 @@ card img{
 }
 .area {
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-left: 20px;
+}
+.submit {
+  margin-bottom: 30px;
 }
 .labelWithSpace {
   padding-right: 8px; /* Adjust the padding as needed */
 }
+footer {
+  display:flex;
+  flex-direction: column;
 
+}
+
+.links {
+ display: flex;
+ justify-content: center;
+ padding: 20px;
+}
+.github, .linkedIn{
+  margin: 10px;
+}
 

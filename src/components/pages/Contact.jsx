@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
             {!isMessageValid && <span className="error">Please enter a message.</span>}
           </div>
-          <button type="submit">Submit</button>
+          <button className="submit" type="submit">Submit</button>
         </form>
         {isMessageSent && !isTyping && ( /* Show "Message sent." text only if not typing */
           <div>

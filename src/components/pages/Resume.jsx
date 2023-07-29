@@ -1,11 +1,3 @@
-const styles = {
-  headerStyle: {
-    background: 'red',
-  },
-  headingStyle: {
-    fontSize: '100px',
-  },
-};
 export default function Resume() {
   return (
     

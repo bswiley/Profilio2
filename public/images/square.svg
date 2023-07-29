@@ -35,13 +35,13 @@
      y="0"
      width="200"
      height="200"
-     fill="blue"
+     fill="#90ee90"
      id="rect1" />
   <text
      x="150"
      y="125"
      font-size="60px"
      text-anchor="middle"
-     fill="#ffa500"
+     fill="#4d4d4b"
      id="text1">BSW</text>
 </svg>
