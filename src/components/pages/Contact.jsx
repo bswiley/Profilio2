@@ -8,17 +8,21 @@ const Contact = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isMessageValid, setIsMessageValid] = useState(true);
   const [isMessageSent, setIsMessageSent] = useState(false);
+  const [isTyping, setIsTyping] = useState(false); // New state for tracking typing
 
   const handleNameChange = (e) => {
     setName(e.target.value);
+    setIsTyping(true); // User is typing
   };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setIsTyping(true); // User is typing
   };
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
+    setIsTyping(true); // User is typing
   };
 
   const handleSubmit = (e) => {
@@ -41,12 +45,13 @@ const Contact = () => {
 
     if (isValidName && isValidEmail && isValidMessage) {
       // Display confirmation message and ask for confirmation to send the email
-      if (window.confirm(`From: ${email}\nName: ${name}\n\nMessage: ${message}\n\nSend this email?`)) {
+      if (window.confirm(`From: ${name}\nEmail: ${email}\n\nMessage: ${message}\n\nSend this email?`)) {
         // If the user clicks "Yes", clear the inputs and show "message sent" alert
         setName("");
         setEmail("");
         setMessage("");
         setIsMessageSent(true);
+        setIsTyping(false); // Reset typing state to false
         alert("Message sent.");
       }
     }
@@ -78,18 +83,20 @@ const Contact = () => {
             {!isEmailValid && <span className="error">Please enter a valid email address.</span>}
           </div>
           <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              rows="15"
-              value={message}
-              onChange={handleMessageChange}
-            />
+            <div className="message">
+              <label htmlFor="message" className="labelWithSpace">Message:</label>
+              <textarea className="area"
+                id="message"
+                rows="15"
+                value={message}
+                onChange={handleMessageChange}
+              />
+            </div>
             {!isMessageValid && <span className="error">Please enter a message.</span>}
           </div>
           <button type="submit">Submit</button>
         </form>
-        {isMessageSent && (
+        {isMessageSent && !isTyping && ( /* Show "Message sent." text only if not typing */
           <div>
             <p>Message sent.</p>
           </div>

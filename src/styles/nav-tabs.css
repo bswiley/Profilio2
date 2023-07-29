@@ -76,6 +76,26 @@ card img{
 #email {
   width: 300px;
   margin-bottom: 20px;
-  margin-left: 33px;
+  margin-left: 63px;
 }
+#name {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 63px;
+}
+.message {
+  display: flex;
+  flex-Direction: row;
+  width: 500px;
+  margin-bottom: 20px;
+}
+.area {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.labelWithSpace {
+  padding-right: 8px; /* Adjust the padding as needed */
+}
+
 
