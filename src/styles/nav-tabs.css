@@ -86,7 +86,7 @@ card img{
 }
 .message {
   display: flex;
-  flex-Direction: row;
+  flex-direction: row;
   width: 500px;
   margin-bottom: 20px;
 }
