@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from 'react';
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form =useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -27,6 +29,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(name,email,message,);
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message
+    };
+    console.log(templateParams)
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -47,6 +56,12 @@ const Contact = () => {
       // Display confirmation message and ask for confirmation to send the email
       if (window.confirm(`From: ${name}\nEmail: ${email}\n\nMessage: ${message}\n\nSend this email?`)) {
         // If the user clicks "Yes", clear the inputs and show "message sent" alert
+        emailjs.send('service_9qrc1ds', 'template_hv82ye2', templateParams, '29vwtdSA-Va6rLrdq')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
         setName("");
         setEmail("");
         setMessage("");
@@ -61,12 +76,12 @@ const Contact = () => {
     <div>
       <h1>Contact Me</h1>
       <div className="contactForm">
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
             <input
               type="text"
-              id="name"
+              name="name"
               value={name}
               onChange={handleNameChange}
             />
@@ -76,7 +91,7 @@ const Contact = () => {
             <label htmlFor="email">Email:</label>
             <input
               type="email"
-              id="email"
+              name="email"
               value={email}
               onChange={handleEmailChange}
             />
@@ -86,7 +101,7 @@ const Contact = () => {
             <div className="message">
               <label htmlFor="message" className="labelWithSpace">Message:</label>
               <textarea className="area"
-                id="message"
+                name="message"
                 rows="15"
                 value={message}
                 onChange={handleMessageChange}
